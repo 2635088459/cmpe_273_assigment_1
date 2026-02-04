@@ -91,7 +91,7 @@ python app.py
 ```
 
 **Expected Output:**
-![Service A Running](Service_a_build.png)
+![Service A Running](service_a_build.png)
 
 ### Step 2: Start Service B (Consumer/Client)
 
@@ -140,7 +140,7 @@ $ curl "http://127.0.0.1:8080/echo?msg=hello"
 {"echo":"hello"}
 ```
 
-![Service A Echo Test](serice_a_echo.png)
+![Service A Echo Test](service_a_echo.png)
 
 **Test 3: Service B Health Check**
 ```bash
@@ -148,7 +148,7 @@ $ curl http://127.0.0.1:8081/health
 {"status":"ok"}
 ```
 
-![Service B Health Check](serivce_b_health_ok.png)
+![Service B Health Check](service_b_health_ok.png)
 
 **Test 4: Service B Calls Service A (Network Communication)**
 ```bash
@@ -160,7 +160,7 @@ $ curl "http://127.0.0.1:8081/call-echo?msg=hello"
 
 ---
 
-### ❌ Failure Scenario (Service A Stopped - Independent Failure)
+### Failure Scenario (Service A Stopped - Independent Failure)
 
 **Step 1:** Stop Service A by pressing `Ctrl+C` in Terminal 1
 
@@ -215,7 +215,7 @@ $ curl "http://127.0.0.1:8081/call-echo?msg=hello"
 {"error":"Request timed out","service_a":"unavailable","service_b":"ok"}
 ```
 
-![Timeout Test](serivce_timeout.png)
+![Timeout Test](service_timeout.png)
 
 **Service B Logs:**
 ```
@@ -223,9 +223,9 @@ $ curl "http://127.0.0.1:8081/call-echo?msg=hello"
 2026-02-03 19:19:41 ERROR service=B endpoint=/call-echo status=error error="Request timeout: HTTPConnectionPool(host='127.0.0.1', port=8080): Read timed out. (read timeout=1.0)" latency_ms=1003
 ```
 
-** IMPORTANT:** After testing, **remove or comment out** the `time.sleep(5)` line
+**IMPORTANT:** After testing, **remove or comment out** the `time.sleep(5)` line
 
-**Why remove it:**
+**Why we remove it:**
 - The 5-second delay will make ALL requests slow
 - Every call to Service A will timeout
 - Normal functionality will be broken
