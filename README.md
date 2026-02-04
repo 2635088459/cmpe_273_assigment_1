@@ -91,7 +91,7 @@ python app.py
 ```
 
 **Expected Output:**
-![Service A Running](service_a_build.png)
+![Service A Running](Service_a_build.png)
 
 ### Step 2: Start Service B (Consumer/Client)
 
@@ -124,7 +124,7 @@ Open **Terminal 3** for testing commands.
 
 ## Success + Failure Proof
 
-### ✅ Success Scenario (Both Services Running)
+### Success Scenario (Both Services Running)
 
 **Test 1: Service A Health Check**
 ```bash
