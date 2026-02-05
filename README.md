@@ -1,4 +1,4 @@
-# CMPE 273 – Week 1 Lab 1: Your First Distributed System (Starter)
+# CMPE 273 – Week 1 Lab 1: Your First Distributed System (Starter) Code based on starter code
 # Haoyuan Shan (Aaron) ID: 015631382
 
 
